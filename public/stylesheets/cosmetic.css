@@ -1,0 +1,21 @@
+h2
+{
+
+	text-align: center;
+	color: blue;	
+	font-family: "Times New Roman", Times, serif;
+}
+
+
+body 
+{
+	margin:5;
+	
+}
+
+
+ table, th, td 
+{
+        border: 0px solid black;
+        width: 100%;
+}
