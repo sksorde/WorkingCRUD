@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script>        
+    /*
+        $(document).ready(function () {
+            var from, to, subject, text;
+            $("#sendEmail").click(function () {
+                to = $("#to").val();
+                subject = $("#subject").val();
+                text = $("#content").val();
+                $("#message").text("Sending E-mail...Please wait");
+                $.get("/send", { to: to, subject: subject, text: text }, function (data) {
+                    if (data == "sent") {
+                        $("#message").empty().html("Email is been sent at "+to+".Please check inbox!");
+                    }
+
+                });
+            });
+        }); */
+    </script>
+</head>
+<body>
+    <h2>Welcome to NodeJS & MongoDB World!!</h2>
+    <div class="success"></div>
+    <div class="error"></div>
+
+    <form id="form1" name="form1" method="post" action="/add">
+        <input type="hidden" name="id" value="" id="id" />
+        <table border="1">
+            <tr>
+                <td>First Name</td>
+                <td><input type="text" id="firstName" name="firstName" required></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input type="text" id="lastName" name="lastName" required></td>
+            </tr>
+            <tr>
+                <td>Email Id</td>
+                <td><input type="text" id="eMail" name="eMail" required></td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" id="subbtn" name="Add User" value="Add User"></td>
+            </tr>
+        </table>
+    </form>
+    <br />
+    <div class="row">
+        <div class="span12">
+            <div class="mini-layout">
+                <h3>Users Listing:<a href="/exporttocsv" style="margin-left: 17%;">Export to CSV</a></h3>
+            </div>
+        </div>
+    </div>
+    <div>
+        <form id="form1" name="form1" method="post" action="/add">
+            <input type="hidden" name="id" value="" id="id" />
+            <table border="1">
+                <tr>
+                    <td>First Name</td>
+                    <td><input type="text" id="firstName" name="firstName" required></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td><input type="text" id="lastName" name="lastName" required></td>
+                </tr>
+                <tr>
+                    <td>Email Id</td>
+                    <td><input type="text" id="eMail" name="eMail" required></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" id="subbtn" name="Add User" value="Add User"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

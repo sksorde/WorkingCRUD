@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../public/stylesheets/toolbar.css">
+
+    <script>
+
+        function handleLoad(e) {
+            console.log('Loaded import: ' + e.target.href);
+        }
+
+        function handleError(e) {
+            console.log('Error loading import: ' + e);
+        }
+
+
+        /*   $(function () {
+               $("#jqLoad").on("click", function () {
+                   $('#content').load("TTTPage.html");
+               });
+           });
+
+           function getTTTPage() {
+               //document.getElementById('showframe').innerHTML = 'SKS';
+               document.getElementById('showframe').innerHTML = '<object type="text/html" data="TTTPage.html"></object>';
+               //window.open('newIncident.html');
+           };
+/*
+           function jqLoad(e) {
+               (e || window.event).preventDefault();
+               var con = document.getElementById('content');
+               var xhr = new XMLHttpRequest();
+
+               xhr.onreadystatechange = function (e) {
+                   alert(xhr.onreadystatechange);
+                   if (xhr.readyState == 4 && xhr.status == 200) {
+                       con.innerHTML = xhr.responseText;
+                   }
+               }
+               xhr.open("GET", "TTTPage.html", true);
+               xhr.setRequestHeader('content-type', 'text/html');
+               xhr.send();
+           }; */
+    </script>
+    <link rel="import" href="TTTPage.html" onload="handleLoad(event)" onerror="handleError(event)">
+</head>
+<body sstyle="height:100%; width: 100%">
+    <!--onload="getTTTPage();"-->
+    <div> <a href="#" onclick="getTTTPage()">another data will appear here</a></div>
+    <div><a href="#" id="jqLoad">Test </a></div>
+    <div id="showframe"></div>
+    <div id="content"></div>
+
+</body>
+</html>
